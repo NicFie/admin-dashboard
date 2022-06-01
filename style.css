@@ -1,0 +1,228 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Roboto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+}
+
+header {
+    background-color: rgb(209, 212, 212);
+    grid-column-start: 2;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "student-search   user-portal"
+        "userwelcome      header-buttons";
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.student-search {
+    grid-area: student-search;
+}
+
+input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+  
+.search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+  
+.search-container button:hover {
+    background: #ccc;
+}
+  
+
+.user-portal {
+    grid-area: user-portal;
+    justify-self: end;
+}
+
+.userwelcome {
+    grid-area: userwelcome;
+}
+
+.header-buttons {
+    grid-area: header-buttons;
+    justify-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.header-button {
+  width: 115px;
+  margin: 5px;
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-position: -20px -20px;
+}
+
+button:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+
+.sidebar {
+    background-color: aquamarine;
+    background-image: url("https://images.unsplash.com/photo-1580744700898-a33aa43febe5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: min-content 1fr 1fr;
+    grid-template-areas:
+        "CM-staff-logo"
+        "list"
+        "." ;
+    gap: 20px;
+    padding: 20px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+ul {
+    display: grid;
+}
+
+li {
+    color: white;
+    font-weight: bold;
+    font-family: Roboto;
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+}
+
+.CM-staff-logo {
+    grid-area: CM-staff-logo;
+    font-size: 50px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.CM-staff-logo img {
+    width: 70px;
+    border-radius: 40%;
+}
+
+.CM-staff-logo h1 {
+    font-size: 30px;
+    font-family: 'Poller One', Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.list {
+    grid-area: list;
+}
+
+.main-container {
+    background-color: azure;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content 1fr 1fr;
+    grid-template-areas:
+        "student-container-title new-students-title" 
+        "student-container new-students"
+        "student-container coming-up"; 
+    gap: 40px; 
+    padding: 30px;  
+}
+
+.student-container-title {
+    grid-area: student-container-title;
+}
+
+.student-container {
+    grid-area: student-container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+}
+
+.card, .right-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+
+
+.right-card {
+    width: 300px;
+    min-height: 300px;
+}
+
+.new-students-title {
+    grid-area: new-students-title;
+}
+
+.new-students {
+    grid-area: new-students;
+}
+
+.coming-up {
+    grid-area: coming-up;
+}
