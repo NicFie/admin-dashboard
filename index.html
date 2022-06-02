@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CM Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poller+One&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2941c70388.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -18,15 +18,14 @@
                 <div class="search-container">
                     <form action="/action_page.php">
                       <input type="text" placeholder="Search students.." name="search">
-                      <button type="submit"><i class="fa fa-search"></i></button>
+                      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></i></button>
                     </form>
                 </div>
             </div>
-            <div class="user-portal">
-                <div class="notification"></div>
-                <div class="username">CM Community</div>
+            <div class="userwelcome">
+                <img src="../sign-up-form/chromamusci community orchestra performance (2).jpg" alt="CM Staff logo">
+                <p>Hi there, <br><span>CM Community!</span></p>
             </div>
-            <div class="userwelcome">Hi there, CM Community!</div>
             <div class="header-buttons">
                 <button class="header-button" type="button">Add student</button>
                 <button class="header-button" type="button">Send email</button>
@@ -39,12 +38,12 @@
                 <h1>CM Staff</h1>
             </div>
             <ul class="list">
-                <li>Home</li>
-                <li>Students</li>
-                <li>Calendar</li>
-                <li>Repetoire</li>
-                <li>Planning</li>
-                <li>Invoices</li>
+                <li><i class="fa-solid fa-house"></i>  Home</li>
+                <li><i class="fa-solid fa-people-line"></i>  Students</li>
+                <li><i class="fa-solid fa-calendar"></i>  Calendar</li>
+                <li><i class="fa-solid fa-music"></i>  Repetoire</li>
+                <li><i class="fa-solid fa-lightbulb"></i>  Planning</li>
+                <li><i class="fa-solid fa-coins"></i>  Invoices</li>
             </ul>
         </div>
         <div class="main-container">
@@ -83,11 +82,60 @@
                 </div>
                 
             </div>
-            <h3 class="new-students-title">New students</h3>
-            <div class="new-students right-card"></div>
+            <h3 class="new-students-title">New</h3>
+            <div class="new-students right-card">
+                <div>
+                    <h4>Email from example@gmail.com</h4>
+                    <p>Hello! I would love to join your orchestra</p>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <h4>Email from example2@gmail.com</h4>
+                    <p>I have a question about next week's rehearsals. 
+                        Can I bring my cat?
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <h4>Email from example3@gmail.com</h4>
+                    <p>Can you pls lower my subs to £1 per rehearsal 
+                        because I've just spent all my money on a 
+                        jacuzzi. Cheers xxx
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <h4>Email from example4@gmail.com</h4>
+                    <p>I love CM so much!!!
+                    </p>
+                </div>
+            </div>
             <div class="coming-up">
                 <h3>Coming up</h3>
-                <div class="right-card"></div>
+                <div class="right-card">
+                    <div>
+                        <h4>3rd June 2022</h4>
+                        <p>Jubilee Concert</p>
+                    </div>
+                    <div class="line"></div>
+                    <div>
+                        <h4>19th June 2022</h4>
+                        <p>Father's Day
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                    <div>
+                        <h4>31st August</h4>
+                        <p>End of Summer Term
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                    <div>
+                        <h4>10th September</h4>
+                        <p>Start of new term!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
